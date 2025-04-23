@@ -26,3 +26,31 @@ sys_which <- function(name) {
   }
   unname(path)
 }
+
+set_extract_options <- function(source_file, dest_file, 
+                                recalculate_projection) {
+  ex <- read.csv(source_file, header = FALSE)
+  options_to_config <- list(
+    recalculate_projection = "Recalculate projection: "
+  )
+  
+  opts <- list(
+    recalculate_projection = as.integer(recalculate_projection)
+  )
+  for (opt in names(opts)) {
+    row <- ex[, 1] == options_to_config[[opt]]
+    if (!any(row)) {
+      stop(sprintf(
+        "Failed to find option '%s' in extract file using row name '%s'.",
+        opt, options_to_config[[opt]]))
+    }
+    ## Hardcoded in col2, first column is name, second col is the value for any
+    ## boolean like option
+    ex[row, 2] <- opts[[opt]]
+  }
+  ## Can just save in place because we're using orderly so this won't change
+  ## the original
+  write.table(ex, dest_file, 
+              row.names = FALSE, quote = FALSE, sep = ",", 
+              na = "", col.names = FALSE)
+}
