@@ -23,3 +23,20 @@ An [Orderly2](https://github.com/mrc-ide/orderly2) project which will fit spectr
    ```
    orderly2::orderly_run("fit_aim", parameters = list(iso3 = "MWI"))
    ```
+
+## Remote location
+
+There is an orderly remote location configured on futures institute sharepoint at [this location](https://futuresinstitute.sharepoint.com/:f:/s/Programming/Es57cTFvF_tKv0KzTKacj_sBaCtvQKke_UtfB8_dzE-LzQ?e=SQVtNK)
+
+To use the remote you must set it up
+
+1. Sync the drive to your local machine and note the path you synced it to
+2. From a directory within this repo run 
+   ```
+   orderly2::orderly_location_add_path("local_name", "/path/from/1")
+   ```
+   The first arg should be a memorable name for the remote location and the second the path to the root. For me this was 
+   ```
+   orderly2::orderly_location_add_path("sharepoint", "C:\\Users\\Test\\Avenir Health\\Programming - spectrum-orderly")
+   ``` 
+   Note the escaped `\`.
