@@ -2,8 +2,7 @@
 ## extract via the CLI
 ## Note spectrum.exe will need to be available on your path for this to work
 
-utils_path <- "utils.R"
-pjnz_dir <- "pjnz"
+utils_path <- "spectrum_utils.R"
 ex_config_template_path <- "aim_extract_template.ex"
 ex_config_path <- "aim_extract.ex"
 out_path <- "out.xlsx"
@@ -22,8 +21,11 @@ orderly2::orderly_artefact(description = "Extracted DP and AIM modvars",
 orderly2::orderly_shared_resource(utils_path)
 source(utils_path)
 
-orderly2::orderly_shared_resource(file.path(pjnz_dir, paste0(iso3, ".pjnz")))
+pjnz_path <- paste0(iso3, ".PJNZ")
+orderly2::orderly_dependency("download_pjnz",
+                             "latest(parameter:iso3 == this:iso3)",
+                             pjnz_path)
 
 set_extract_options(ex_config_template_path, ex_config_path, 
                     recalculate_projection)
-spectrum_extract(pjnz_dir, ex_config_path, out_path)
+spectrum_extract(".", ex_config_path, out_path)
