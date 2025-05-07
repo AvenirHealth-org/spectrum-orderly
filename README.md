@@ -32,3 +32,8 @@ To use the remote you must set it up
 2. Run the script `./scripts/configure_remote.R` to set up the remote location with the name "sharepoint"
    
 You can now push, pull and query from the remote. See [docs](https://mrc-ide.github.io/orderly2/articles/collaboration.html) for details of working with the remote.
+
+## Running via CI
+
+The fit task is run automatically every week via private repo [spectrum-orderly-runner](https://github.com/avenirhealth-org/spectrum-orderly-runner). You can also manually trigger the run. 
+This will run the fit AIM task for all countries. 
