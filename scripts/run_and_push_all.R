@@ -9,6 +9,9 @@ Usage:
 proj_root <- here::here()
 args <- docopt::docopt(doc)
 
+# Initialize if we are on a new CI runner, safe to re-run this.
+orderly2::orderly_init(".")
+
 source(file.path(proj_root, "scripts/consts.R"))
 source(file.path(proj_root, "scripts/configure_remote.R"))
 
