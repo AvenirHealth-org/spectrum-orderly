@@ -1,10 +1,9 @@
 orderly2::orderly_strict_mode()
-orderly2::orderly_parameters(iso3 = NULL)
+params <- orderly2::orderly_parameters(iso3 = NULL)
 
-out_path <- paste0(iso3, ".PJNZ")
+out_path <- paste0(params$iso3, ".PJNZ")
 orderly2::orderly_artefact(description = "Downloaded PJNZ file from dropbox", 
                            out_path)
-
 
 
 ## Note these are in Rob A's clone of the publicly accessible folder

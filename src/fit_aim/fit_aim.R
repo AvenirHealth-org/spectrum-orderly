@@ -8,10 +8,10 @@ ex_config_path <- "aim_extract.ex"
 out_path <- "out.xlsx"
 
 orderly2::orderly_strict_mode()
-orderly2::orderly_parameters(iso3 = NULL)
+params <- orderly2::orderly_parameters(iso3 = NULL,
+                                       recalculate_projection = TRUE,
+                                       spectrum_version = "6.43")
 orderly2::orderly_resource(ex_config_template_path)
-orderly2::orderly_parameters(recalculate_projection = TRUE)
-orderly2::orderly_parameters(spectrum_version = "6.43")
 orderly2::orderly_artefact(
   description = "Extract configuration used after setting options via parameters", 
   ex_config_path)
@@ -21,11 +21,11 @@ orderly2::orderly_artefact(description = "Extracted DP and AIM modvars",
 orderly2::orderly_shared_resource(utils_path)
 source(utils_path)
 
-pjnz_path <- paste0(iso3, ".PJNZ")
+pjnz_path <- paste0(params$iso3, ".PJNZ")
 orderly2::orderly_dependency("download_pjnz",
                              "latest(parameter:iso3 == this:iso3)",
                              pjnz_path)
 
 set_extract_options(ex_config_template_path, ex_config_path, 
-                    recalculate_projection)
+                    params$recalculate_projection)
 spectrum_extract(".", ex_config_path, out_path)
