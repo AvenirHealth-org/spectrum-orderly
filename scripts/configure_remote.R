@@ -14,3 +14,4 @@ if (!(location_name %in% locations)) {
 } else {
   message(sprintf("Location '%s' already known.", location_name))
 }
+orderly2::orderly_location_fetch_metadata(location_name)
