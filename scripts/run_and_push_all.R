@@ -17,7 +17,7 @@ source(file.path(proj_root, "scripts/configure_remote.R"))
 
 for (country in countries) {
   message(sprintf("Running fit AIM task for '%s'", country))
-  id <- orderly2::orderly_run("fit_aim", 
+  id <- orderly2::orderly_run("run_aim", 
                               parameters = list(iso3 = country),
                               location = c("local", location_name),
                               echo = FALSE)

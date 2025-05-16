@@ -19,7 +19,7 @@ as you have the sharepoint remote configured (see the section on "remote locatio
 
 Run the report passing the relevant iso3 as a parameter
 ```
-orderly2::orderly_run("fit_aim", parameters = list(iso3 = "MWI"))
+orderly2::orderly_run("run_aim", parameters = list(iso3 = "MWI"))
 ```
 
 ## Remote location
