@@ -6,14 +6,15 @@ orderly2::orderly_artefact(description = "Downloaded PJNZ file from dropbox",
                            out_path)
 
 
-## Note these are in Rob A's clone of the publicly accessible folder
-## https://www.dropbox.com/scl/fo/sq9rveiuwbjpbp12rc886/AGdoAajJUPvV8fqgsCIiHGs/2024%20Estimates/Public%20files?rlkey=ojrctg7rm1czrdn2tv4um6jyl&subfolder_nav_tracking=1&st=sdq4ep08&dl=0
+## Note these are in Rob A's clone of the publicly accessible folder for 2024 estimates
+## https://www.dropbox.com/scl/fo/sq9rveiuwbjpbp12rc886/AP_-DMIjBNto5WxhUP11m1E?rlkey=ojrctg7rm1czrdn2tv4um6jyl&e=1&st=dijfd3m3&dl=0
 ## but seemlingly you can't use the API to access a public file which seems
 ## a bit strange. Anyway this will do for now
 dropbox_root <- "/Public files"
+dropbox_non_public_root <- "Non public spectrum files"
 iso3_to_dropbox_path <- list(
   "AGO" = file.path(dropbox_root, "ESA/Angola_29May2024.pjnz"),
-  "BRN" = file.path(dropbox_root, "AP/"),
+  "BRN" = file.path(dropbox_non_public_root, "AP/Brunei Darussalam shadow 2024 UA.PJNZ"),
   "KAZ" = file.path(dropbox_root, "EECA/Kaz MoreKnownPosANC +UA_11April2024.PJNZ"),
   "MWI" = file.path(dropbox_root, "ESA/Malawi_2024_v11_ART_Num.pjnz"),
   "PAK" = file.path(dropbox_root, "AP/Pakistan AEM-270524 WPP22 revised UA.PJNZ"),
