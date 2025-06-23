@@ -1,0 +1,204 @@
+iso3,path
+BGD,Non public spectrum files\AP\Bangladesh AEM-2024-08-May-Alauddin.PJNZ
+BRN,Non public spectrum files\AP\Brunei Darussalam shadow 2024 UA.PJNZ
+CHN,Non public spectrum files\AP\China +2023-24GAM_05June2024.PJNZ
+PRK,Non public spectrum files\AP\DPRKorea_2024 shadow UA.PJNZ
+JPN,Non public spectrum files\AP\Japan_Final_shadow_2024.04.23.PJNZ
+MYS,Non public spectrum files\AP\Malaysia AEM-Spectrum 2024 14May2024.PJNZ
+MDV,Non public spectrum files\AP\Maldives_23May2024_UA.PJNZ
+MMR,Non public spectrum files\AP\Myanmar AEM5.2_ v6.35_UA_v2_14052024.PJNZ
+KOR,Non public spectrum files\AP\RepKorea_2024_Final_shadow_2024.05.10.PJNZ
+VNM,Non public spectrum files\AP\Vietnam_22.1.24_v3_18.3.24_Data2023Updated_26Mar24_Updated_20May24.PJNZ
+BLZ,Non public spectrum files\CAR\Belize Spline5Knots+UA_2024April19.PJNZ
+CUB,Non public spectrum files\CAR\Cuba PTMI2012_18March2024 UA.PJNZ
+JAM,Non public spectrum files\CAR\Jamaica_MSM+FSWsize TG100pctF_16May2024.PJNZ
+KNA,Non public spectrum files\CAR\St Kitts+Nevis SingleLog+UA_03May2024.PJNZ
+SUR,Non public spectrum files\CAR\Suriname IncreasARTBeforePregnancy+UA_27March2024.PJNZ
+TTO,Non public spectrum files\CAR\TNT_CSAVR+shEPP KOSprogramTo2022+UA_04May2024.PJNZ
+BLR,Non public spectrum files\EECA\Belarus2024 16APR24 kms.PJNZ
+BIH,Non public spectrum files\EECA\BosHerz_2024_Final_oi_2024.04.23.PJNZ
+RUS,Non public spectrum files\EECA\Russia ChildARTpct-KOScalc+UA_03June2024.PJNZ
+TKM,Non public spectrum files\EECA\Turkmenistan IncidRateAsRussiaCSAVR_01May2024.PJNZ
+UKR,Non public spectrum files\EECA\Ukr_2024.04.04 rev fert UA.PJNZ
+MUS,Non public spectrum files\ESA\Mauritius_2024_v3.PJNZ
+NAM,Non public spectrum files\ESA\Namibia_2024_04_15.pjnz
+BRA,Non public spectrum files\LA\Brazil_ARTpctCD4_23April2024v1_ek.PJNZ
+CHL,Non public spectrum files\LA\CHILE LACdefaults+UA_26Abril2024.PJNZ
+SLV,Non public spectrum files\LA\El Salvador DeathIHME-2018+origVR2019 EPPshadow+UA_22Abril2024.PJNZ
+NIC,Non public spectrum files\LA\Nicaragua+UA_17abril2024.PJNZ
+URY,Non public spectrum files\LA\Uruguay CSAVR+UA_03May2024.PJNZ
+DZA,Non public spectrum files\MENA\ALGERIA+UA_24mars2024.PJNZ
+BHR,Non public spectrum files\MENA\Bahrain+UA_sh_21May2024.PJNZ
+EGY,Non public spectrum files\MENA\Egypt Spline4knots+UA_10March2024.PJNZ
+IRQ,Non public spectrum files\MENA\Iraq Src3_DoubleLog_6.33b3_25March2024+UA.PJNZ
+JOR,Non public spectrum files\MENA\JORDAN Spline4Knots_30April2024_UA.PJNZ
+KWT,Non public spectrum files\MENA\Kuwait_CSAVR DoubleLog ARTbyAge_30April2024+UA.PJNZ
+LBY,Non public spectrum files\MENA\Libya PMTCT2023+UA_30May2024.PJNZ
+OMN,Non public spectrum files\MENA\OMAN+UA_13May2024.PJNZ
+QAT,Non public spectrum files\MENA\QATAR DoubleLogUpdateKOS+UA_11May2024.PJNZ
+SDN,Non public spectrum files\MENA\Sudan_Final_27Mar2024_survey.PJNZ
+ARE,Non public spectrum files\MENA\UAE 2014-19origAIDSdeathWOage-sex+UA_20Apr2024.PJNZ
+CMR,Non public spectrum files\WCA\cameroon_2024_v4_shadow.pjnz
+GNQ,Non public spectrum files\WCA\GNQ_2024_v0.pjnz
+CAF,Non public spectrum files\WCA\RCA_2024_v2.pjnz
+STP,Non public spectrum files\WCA\stp_2024_v0.PJNZ
+AUT,Non public spectrum files\WCENA\Austria_2024_Final_shadow_2024.03.25.PJNZ
+BEL,Non public spectrum files\WCENA\Belgium_2024_Final_shadow_2024.05.27.PJNZ
+BGR,Non public spectrum files\WCENA\Bulgaria_2024_Final_oo_2024.04.25.PJNZ
+CYP,Non public spectrum files\WCENA\Cyprus_2024_Final_shadow_2024.04.24.PJNZ
+CZE,Non public spectrum files\WCENA\Czechia_2024_Final_oi_2024.04.24.PJNZ
+HUN,Non public spectrum files\WCENA\Hungary_2024_Final_shadow_2024.05.09.PJNZ
+ISR,Non public spectrum files\WCENA\Israel_2024_Final_oo_2024.04.30.PJNZ
+LVA,Non public spectrum files\WCENA\Latvia_2024_Final_oo_2024.04.09.PJNZ
+NOR,Non public spectrum files\WCENA\Norway_2024_Final_shadow_2024.04.24.PJNZ
+POL,Non public spectrum files\WCENA\Poland_2024_Final_shadow_2024.05.20.pjnz
+SVN,Non public spectrum files\WCENA\Slovenia_2024_Final_oo_2024.05.23.PJNZ
+ESP,Non public spectrum files\WCENA\Spain_2024_Final_oo_2024.05.01.pjnz
+SWE,Non public spectrum files\WCENA\Sweden_2024_Final_oi_2024.05.01.PJNZ
+TUR,Non public spectrum files\WCENA\Turkey_2024_Final_shadow_2024.04.30.PJNZ
+GBR,Non public spectrum files\WCENA\UK_2024_Final_shadow_2024.04.23.PJNZ
+USA,Non public spectrum files\WCENA\USA_2024_Final_oo_2024.05.22.PJNZ
+AFG,Public files\AP\Afghanistan 20 _May_2024 kms.PJNZ
+AUS,Public files\AP\Australia_2024_Final_oo_2024.03.19.PJNZ
+BTN,Public files\AP\Bhutan_Spectrum 2024_04April_(author_Jamyang_Decehn) kms ua.PJNZ
+KHM,Public files\AP\Cambodia_Spectrum_2024_v3_20032024.PJNZ
+FJI,Public files\AP\Fiji_016_05_2024 -UA.pjnz
+IDN,Public files\AP\Indonesia Spectrum 220524_noKoS_UA.PJNZ
+IRN,Public files\AP\Iran_2024_V02_20240325.PJNZ
+LAO,Public files\AP\Lao PDR_8Feb2024_v4_March13 ua.PJNZ
+MNG,Public files\AP\Mongolia_AEM_final_spectrum_UA_14 May 2024.PJNZ
+NPL,Public files\AP\Nepal_2024April04 kms ua.PJNZ
+NZL,Public files\AP\NewZealand_2024_Final_oo_2024.04.23.PJNZ
+PAK,Public files\AP\Pakistan AEM-270524 WPP22 revised UA.PJNZ
+PHL,Public files\AP\PHILIPPINES Spectrum-AEM_27May2024.PJNZ
+PNG,Public files\AP\PNG_2024_v6b_170524 UA.PJNZ
+SGP,Public files\AP\Singapore_2024_Final_oi_2024.04.30.PJNZ
+LKA,Public files\AP\Sri Lanka AEM_17 May 2024.PJNZ
+THA,Public files\AP\Thailand  Spectrum-AEM_12032024(V6.31) V3 Number PMTCT_Uncertainty Analysis.PJNZ
+TLS,Public files\AP\Timor Leste _15-05-2024.PJNZ
+BHS,Public files\CAR\Bahamas+UA_24April2024.PJNZ
+BRB,Public files\CAR\Barbados DoubleLog+UA_16Apr2024.PJNZ
+DOM,Public files\CAR\DomRep RemRHybrid MigrEppClas+UA_06May2024.pjnz
+GUY,Public files\CAR\Guyana EPPcalibrNearDefault+UA_05May2024.PJNZ
+HTI,Public files\CAR\Haiti_2024_v3.pjnz
+LCA,Public files\CAR\LCA 2005-11ART_17May2024.PJNZ
+ALB,Public files\EECA\Albania_2024_Final_oo_2024.04.26.PJNZ
+ARM,Public files\EECA\Armenia CSAVR_EPPshadow_26 Mar 2024.PJNZ
+AZE,Public files\EECA\Azerbaijan 2024 v4-16052024-1.52PM.PJNZ
+GEO,Public files\EECA\Georgia_2024_OCH kms 02 May 24.PJNZ
+KAZ,Public files\EECA\Kaz MoreKnownPosANC +UA_11April2024.PJNZ
+KGZ,Public files\EECA\KGZ CSAVR DobLog FertilityLAFset1.1+UA_11May2024.PJNZ
+MDA1,Public files\EECA\Moldova_left_bank_10_04_2024 wpp2017.PJNZ
+MDA2,Public files\EECA\Moldova_right_bank_10_04_2024 wpp2017.PJNZ
+MNE,Public files\EECA\Montenegro_2024_Final_oo_2024.03.07.PJNZ
+MKD,Public files\EECA\North Macedonia_2024_Final_oo_2024.04.30.PJNZ
+TJK,Public files\EECA\Tajikistan EPP+UA_26March2024.PJNZ
+UZB,Public files\EECA\UZB_CSAVR childKOS+UA_22May2024.PJNZ
+AGO,Public files\ESA\Angola_29May2024.pjnz
+BWA,Public files\ESA\Botswana2024_04_22_vKOS.PJNZ
+COM,Public files\ESA\Comoros_2024_v1.PJNZ
+ERI,Public files\ESA\Eritrea _2024_v2.PJNZ
+SWZ,Public files\ESA\Eswatini_2024_v5_Final.PJNZ
+ETH1,Public files\ESA\Ethiopia\Ethiopia Addisababa Feb 28_ 2024.PJNZ
+ETH2,Public files\ESA\Ethiopia\Ethiopia Affar Feb 28_ 2024.PJNZ
+ETH3,Public files\ESA\Ethiopia\Ethiopia Amhara Feb 28_ 2024.PJNZ
+ETH4,Public files\ESA\Ethiopia\Ethiopia Benis Feb 28_2024.PJNZ
+ETH5,Public files\ESA\Ethiopia\Ethiopia Central Ethiopia Feb 28_ 2024.PJNZ
+ETH6,Public files\ESA\Ethiopia\Ethiopia Dire Dawa  Feb 28_ 2024.PJNZ
+ETH7,Public files\ESA\Ethiopia\Ethiopia Gambella Feb 28_ 2024.PJNZ
+ETH8,Public files\ESA\Ethiopia\Ethiopia Harari Feb 28_ 2024.PJNZ
+ETH9,Public files\ESA\Ethiopia\Ethiopia Oromiya Feb 28_ 2024.PJNZ
+ETH10,Public files\ESA\Ethiopia\Ethiopia Sidama Feb 28_ 2024.PJNZ
+ETH11,Public files\ESA\Ethiopia\Ethiopia Somali Feb 28_ 2024.PJNZ
+ETH12,Public files\ESA\Ethiopia\Ethiopia South Ethiopia Feb 28_2024.PJNZ
+ETH13,Public files\ESA\Ethiopia\Ethiopia Southwest Ehiopia Feb 28_ 2024.PJNZ
+ETH14,Public files\ESA\Ethiopia\Ethiopia Tigray Feb 28_ 2024.PJNZ
+KEN1,Public files\ESA\Kenya 2024 06 17\Kenya-Central_19Apr2024_KOS.PJNZ
+KEN2,Public files\ESA\Kenya 2024 06 17\Kenya-Coast_19Apr2024_KOS.pjnz
+KEN3,Public files\ESA\Kenya 2024 06 17\Kenya-Eastern_19Apr2024_kos.PJNZ
+KEN4,Public files\ESA\Kenya 2024 06 17\Kenya-Nairobi_19Apr2024_kos.PJNZ
+KEN5,Public files\ESA\Kenya 2024 06 17\Kenya-North Eastern_19Apr2024_kos.PJNZ
+KEN6,Public files\ESA\Kenya 2024 06 17\Kenya-Nyanza_19Apr2024_kos.PJNZ
+KEN7,Public files\ESA\Kenya 2024 06 17\Kenya-Rift Valley_19Apr2024_kos.PJNZ
+KEN8,Public files\ESA\Kenya 2024 06 17\Kenya-Western_19Apr2024_kos.PJNZ
+LSO,Public files\ESA\lesotho_2024_02_20.pjnz
+MDG,Public files\ESA\Madagascar_31_mai_2024.PJNZ
+MWI,Public files\ESA\Malawi_2024_v11_ART_Num.pjnz
+MOZ,Public files\ESA\MOZ_6.36_22.04.2024.PJNZ
+RWA,Public files\ESA\Rwanda_2024_v3.pjnz
+ZAF,Public files\ESA\South Africa 2024_Thembisa 4.7_ver03_ua.PJNZ
+SSD,Public files\ESA\South_Sudan_2024_final.PJNZ
+TZA,Public files\ESA\Tanzania_National_Zonal_11Mar2024_2023Adjusted.pjnz
+UGA,Public files\ESA\Uganda-spectrum_16thMay2024.pjnz
+ZMB,Public files\ESA\Zambia_2024_National_Feb16_11.30_Finalfile_IIT2pc_kos.PJNZ
+ZWE1,Public files\ESA\Zimbabwe 2024 05 31\ZW_Bulawayo_2024.PJNZ
+ZWE2,Public files\ESA\Zimbabwe 2024 05 31\ZW_Harare _2024.PJNZ
+ZWE3,Public files\ESA\Zimbabwe 2024 05 31\ZW_Manicaland_2024.PJNZ
+ZWE4,Public files\ESA\Zimbabwe 2024 05 31\ZW_Mashonaland Central_2024.PJNZ
+ZWE5,Public files\ESA\Zimbabwe 2024 05 31\ZW_Mashonaland East_2024.PJNZ
+ZWE6,Public files\ESA\Zimbabwe 2024 05 31\ZW_Mashonaland West_2024.PJNZ
+ZWE7,Public files\ESA\Zimbabwe 2024 05 31\ZW_Masvingo_2024.PJNZ
+ZWE8,Public files\ESA\Zimbabwe 2024 05 31\ZW_Matabeleland North _2024.PJNZ
+ZWE9,Public files\ESA\Zimbabwe 2024 05 31\ZW_Matabeleland South_2024.PJNZ
+ZWE10,Public files\ESA\Zimbabwe 2024 05 31\ZW_Midlands_2024.PJNZ
+ARG,Public files\LA\Argentina 2024 final 15-5-24.PJNZ
+BOL,Public files\LA\Bolivia HSH0.7 SW-TG1 M-F0.5-0.65+UA_28May2024.PJNZ
+COL,Public files\LA\Colombia+UA_19Mayo2024.PJNZ
+CRI,Public files\LA\CostaRica+UA_29April2024.PJNZ
+ECU,Public files\LA\Ecuador+UA_29abril2024.PJNZ
+GTM,Public files\LA\Guatemala+UA_23April2024.PJNZ
+HND,Public files\LA\Honduras ChildInterrupt nearProgramKOS+UA_20May2024.PJNZ
+MEX,Public files\LA\Mexico LACmort rLog ChildKOScalc+UA_25abril2024.PJNZ
+PAN,Public files\LA\PANAMÁ DobLog KOS program+UA_13May2024.PJNZ
+PRY,Public files\LA\Paraguay CSAVR-DoubleLog+UA_16April2024.PJNZ
+PER,Public files\LA\Peru TFRadjust Fertility2+UA_22May2024.PJNZ
+VEN,Public files\LA\Venezuela Spline5knot+UA_01April2024.PJNZ
+DJI,Public files\MENA\Djibouti_EPP-Conc+UA_15Mars2024.PJNZ
+LBN,Public files\MENA\Lebanon_07March2024_ek_KOScalc_UA Valid_RF.pjnz
+MAR,Public files\MENA\Morocco_2024 v4 finale 31 Mai.pjnz
+SAU,Public files\MENA\Saudi Arabia FertilityAdjLow+UA_08April2024.PJNZ
+SOM,Public files\MENA\Somalia Calibr0.4 PuntF0.5+UA_10May2024.PJNZ
+SYR,Public files\MENA\SYRIA Spline4+BFwoART_10Apr2024+UA.PJNZ
+TUN,Public files\MENA\Tunisia EPP+UA_18May2024.PJNZ
+YEM,Public files\MENA\Yemen CSAVR GBD2021Source3_25March2024+UA.pjnz
+BEN,Public files\WCA\Benin_2024_v3 revu.PJNZ
+BFA,Public files\WCA\Burkina_faso_2024_v4.pjnz
+BDI,Public files\WCA\burundi_2024_v05.pjnz
+CPV,Public files\WCA\cabo_verde_2024_vf_04.pjnz
+TCD,Public files\WCA\Chad_2024_V4.pjnz
+COG,Public files\WCA\congo_2024_v3.pjnz
+CIV,Public files\WCA\cotedivoire_15_03_2024_GTT_UAexcuted.pjnz
+COD,Public files\WCA\drc_2024_v5_KoS_ONUSIDA_20MAI24 corrige1.pjnz
+GAB,Public files\WCA\Gabon_2024_v3.pjnz
+GMB,Public files\WCA\Gambia_2024_v4.PJNZ
+GHA,Public files\WCA\ghana_2024_v6.pjnz
+GIN,Public files\WCA\Guinee_2024_v2.pjnz
+GNB,Public files\WCA\Guine_Bissau_2024_v3.PJNZ
+LBR,Public files\WCA\Liberia_2024_v3.pjnz
+MLI,Public files\WCA\mali_2024_v1_revue.pjnz
+MRT,Public files\WCA\Mauritanie_2024_VF.pjnz
+NGA,Public files\WCA\Nigeria_2024_05_22.PJNZ
+NER,Public files\WCA\Niger_2024_v2.pjnz
+SEN,Public files\WCA\Senegal_2024_05_21_EPP10_ EBY & BAMBA.pjnz
+SLE,Public files\WCA\sierra_leone_v3_2024_mar_13.pjnz
+TGO,Public files\WCA\togo_2024_v2.pjnz
+CAN,Public files\WCENA\Canada_2024_Final_oo_2024.04.23.PJNZ
+HRV,Public files\WCENA\Croatia_2024_Final_oo_2024.04.25.pjnz
+DNK,Public files\WCENA\Denmark_2024_Final_oo_2024.05.14.PJNZ
+EST,Public files\WCENA\Estonia_2024_Final_oo_2024.03.21.PJNZ
+FIN,Public files\WCENA\Finland_2024_Final_shadow_2024.05.09.PJNZ
+FRA,Public files\WCENA\France 2024_Final_oo_2024.03.06.PJNZ
+DEU,Public files\WCENA\Germany_2024_Final_oo_2024.04.17.PJNZ
+GRC,Public files\WCENA\Greece_2024_Final_oo_2024.05.14.PJNZ
+ISL,Public files\WCENA\Iceland_2024_Final_2024.04.29.PJNZ
+IRL,Public files\WCENA\Ireland_2024_Final_oo_2024.04.26.PJNZ
+ITA,Public files\WCENA\Italy_2024_Final_oo_2024.05.28.PJNZ
+LTU,Public files\WCENA\Lithuania_2024_Final_oo_2024.04.30.PJNZ
+LUX,Public files\WCENA\Luxembourg_2024_Final_oo_2024.04.30.PJNZ
+MLT,Public files\WCENA\Malta_2024_Final_oo_2024.04.30.PJNZ
+NLD,Public files\WCENA\Netherlands_2024_Final_oo_2024.04.05.PJNZ
+PRT,Public files\WCENA\Portugal_2024_Final_oo_2024.04.29.PJNZ
+ROU,Public files\WCENA\Romania_2024_Final_oi_2024.05.30.PJNZ
+SRB,Public files\WCENA\Serbia_2024_Final_oo_2024.04.29.PJNZ
+SVK,Public files\WCENA\Slovakia_2024_Final_oi_2023.05.01.PJNZ
+CHE,Public files\WCENA\Switzerland_2024_Final_oo_2024.04.25.PJNZ

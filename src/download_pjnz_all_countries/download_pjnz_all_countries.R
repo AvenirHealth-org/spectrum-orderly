@@ -15,12 +15,6 @@
 ## in bulk. But here we are.
 
 orderly2::orderly_strict_mode()
-params <- orderly2::orderly_parameters(iso3 = NULL)
-
-out_path <- paste0(params$iso3, ".PJNZ")
-orderly2::orderly_artefact(description = "Copy PJNZ from local path into orderly", 
-                           out_path)
-
 
 ## Note that to run this you will have to have a local copy of the UNAIDS 
 ## spectrum files from Dropbox. Either from downloading or dropbox sync
@@ -30,16 +24,21 @@ orderly2::orderly_shared_resource(country_csv_path)
 countries <- read.csv(country_csv_path)
 iso3_to_dropbox_path <- setNames(countries$path, countries$iso3)
 
-if (!(iso3 %in% names(iso3_to_dropbox_path))) {
-  stop(paste("No dropbox path configured for ISO3 code:", iso3))
-}
-
 orderly2::orderly_shared_resource("env")
 dotenv::load_dot_env("env")
 PJNZ_ROOT_DIR <- Sys.getenv("PJNZ_ROOT_DIR")
-dropbox_path <- file.path(PJNZ_ROOT_DIR, iso3_to_dropbox_path[[iso3]])
-message(dropbox_path)
 
-file.copy(dropbox_path, out_path)
-
-message("Download complete")
+for (iso3 in countries$iso3) {
+  out_path <- paste0(iso3, ".PJNZ")
+  orderly2::orderly_artefact(
+    description = sprintf("Copy %s PJNZ from local path into orderly", iso3),
+    out_path)
+  
+  dropbox_path <- file.path(PJNZ_ROOT_DIR, iso3_to_dropbox_path[[iso3]])
+  
+  message(sprintf("Downloading %s", iso3))
+  
+  file.copy(dropbox_path, out_path)
+  
+  message(sprintf("Download complete for %s", iso3))
+}

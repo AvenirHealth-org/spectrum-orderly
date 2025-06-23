@@ -8,8 +8,7 @@ ex_config_path <- "aim_extract.ex"
 out_path <- "out.xlsx"
 
 orderly2::orderly_strict_mode()
-params <- orderly2::orderly_parameters(iso3 = NULL,
-                                       recalculate_projection = TRUE,
+params <- orderly2::orderly_parameters(recalculate_projection = TRUE,
                                        spectrum_version = "6.43")
 orderly2::orderly_shared_resource(ex_config_template_path)
 orderly2::orderly_artefact(
@@ -21,11 +20,15 @@ orderly2::orderly_artefact(description = "Extracted DP and AIM modvars",
 orderly2::orderly_shared_resource(utils_path)
 source(utils_path)
 
-pjnz_path <- paste0(params$iso3, ".PJNZ")
-orderly2::orderly_dependency("download_pjnz",
-                             "latest(parameter:iso3 == this:iso3)",
-                             pjnz_path)
+country_csv_path <- "countries.csv"
+orderly2::orderly_shared_resource(country_csv_path)
+countries <- read.csv(country_csv_path)
+
+pjnz_files <- paste0(countries$iso3, ".PJNZ")
+orderly2::orderly_dependency("download_pjnz_all_countries", "latest", 
+                             pjnz_files)
 
 set_extract_options(ex_config_template_path, ex_config_path, 
                     params$recalculate_projection)
-spectrum_extract(".", ex_config_path, out_path)
+## 3 hour time out
+spectrum_extract(".", ex_config_path, out_path, timeout = 60 * 60 * 3)

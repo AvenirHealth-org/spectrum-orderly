@@ -1,16 +1,17 @@
-spectrum_extract <- function(dir, config, output) {
+spectrum_extract <- function(dir, config, output, timeout = 180) {
   spectrum("/ExtractBatch", 
            normalizePath(dir), 
            normalizePath(config), 
-           normalizePath(output))
+           normalizePath(output),
+           timeout = timeout)
 }
 
-spectrum <- function(...) {
+spectrum <- function(..., timeout) {
   ## Note for this to work you must add Spectrum installation
   ## dir into your path
   spec <- sys_which("spectrum")
   res <- suppressWarnings(system2(spec, c(...), stdout = TRUE, stderr = TRUE,
-                                  timeout = 180))
+                                  timeout = timeout))
   if (system_success(res)) {
     return(res)
   }

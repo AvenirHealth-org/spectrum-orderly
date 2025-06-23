@@ -1,6 +1,6 @@
 proj_root <- here::here()
 
-source(file.path(proj_root, "scripts/consts.R"))
+location_name <- "sharepoint"
 
 locations <- orderly2::orderly_location_list()
 if (!(location_name %in% locations)) {

@@ -12,14 +12,9 @@ args <- docopt::docopt(doc)
 # Initialize if we are on a new CI runner, safe to re-run this.
 orderly2::orderly_init(".")
 
-source(file.path(proj_root, "scripts/consts.R"))
 source(file.path(proj_root, "scripts/configure_remote.R"))
 
-for (country in countries) {
-  message(sprintf("Running fit AIM task for '%s'", country))
-  id <- orderly2::orderly_run("run_aim", 
-                              parameters = list(iso3 = country),
-                              location = c("local", location_name),
-                              echo = FALSE)
-  orderly2::orderly_location_push(id, location_name)
-}
+id <- orderly2::orderly_run("run_aim_all_countries",
+                            location = c("local", location_name),
+                            echo = FALSE)
+orderly2::orderly_location_push(id, location_name)
