@@ -9,7 +9,8 @@ out_path <- "out.xlsx"
 
 orderly2::orderly_strict_mode()
 params <- orderly2::orderly_parameters(recalculate_projection = TRUE,
-                                       spectrum_version = "6.43")
+                                       spectrum_version = "6.43",
+                                       run_leapfrog = FALSE)
 orderly2::orderly_shared_resource(ex_config_template_path)
 orderly2::orderly_artefact(
   description = "Extract configuration used after setting options via parameters", 
