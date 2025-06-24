@@ -13,8 +13,12 @@ args <- docopt::docopt(doc)
 orderly2::orderly_init(".")
 
 source(file.path(proj_root, "scripts/configure_remote.R"))
+source(file.path(proj_root, "shared/spectrum_utils.R"))
+
+version <- spectrum_version()
 
 id <- orderly2::orderly_run("run_aim_all_countries",
+                            parameters = list(spectrum_version = version),
                             location = c("local", location_name),
                             echo = FALSE)
 orderly2::orderly_location_push(id, location_name)

@@ -8,8 +8,8 @@ ex_config_path <- "aim_extract.ex"
 out_path <- "out.xlsx"
 
 orderly2::orderly_strict_mode()
-params <- orderly2::orderly_parameters(recalculate_projection = TRUE,
-                                       spectrum_version = "6.43",
+params <- orderly2::orderly_parameters(spectrum_version = NULL,
+                                       recalculate_projection = TRUE,
                                        run_leapfrog = FALSE)
 orderly2::orderly_shared_resource(ex_config_template_path)
 orderly2::orderly_artefact(
@@ -20,6 +20,9 @@ orderly2::orderly_artefact(description = "Extracted DP and AIM modvars",
 
 orderly2::orderly_shared_resource(utils_path)
 source(utils_path)
+
+git_hash <- git_hash_from_spectrum_version(params$spectrum_version)
+orderly2::orderly_description(custom = list(spectrum_git_hash = git_hash))
 
 country_csv_path <- "countries.csv"
 orderly2::orderly_shared_resource(country_csv_path)

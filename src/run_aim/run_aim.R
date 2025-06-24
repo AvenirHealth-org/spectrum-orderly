@@ -9,8 +9,8 @@ out_path <- "out.xlsx"
 
 orderly2::orderly_strict_mode()
 params <- orderly2::orderly_parameters(iso3 = NULL,
+                                       spectrum_version = NULL,
                                        recalculate_projection = TRUE,
-                                       spectrum_version = "6.43",
                                        run_leapfrog = FALSE)
 orderly2::orderly_shared_resource(ex_config_template_path)
 orderly2::orderly_artefact(
@@ -21,6 +21,9 @@ orderly2::orderly_artefact(description = "Extracted DP and AIM modvars",
 
 orderly2::orderly_shared_resource(utils_path)
 source(utils_path)
+
+git_hash <- git_hash_from_spectrum_version(params$spectrum_version)
+orderly2::orderly_description(custom = list(spectrum_git_hash = git_hash))
 
 pjnz_path <- paste0(params$iso3, ".PJNZ")
 orderly2::orderly_dependency("download_pjnz",

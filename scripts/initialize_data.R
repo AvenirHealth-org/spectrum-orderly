@@ -7,7 +7,7 @@ message("The folder can be found here https://www.dropbox.com/scl/fo/o3gp67kjqj6
 message(paste("Copy or sync the 'Public files' and 'Non public spectrum files' from '2024 Estimates'",
               "folder onto your local machine and enter the path below."))
 message("Path will be interpreted as a string, there is no need to escape spaces.")
-cat("Local path to PJNZ dir: ")
+message("Local path to PJNZ dir: ")
 path <- readLines("stdin", n = 1)
 
 if (!file.exists(path)) {
@@ -24,4 +24,13 @@ if (!file.exists(file.path(path, "Public files")) || !file.exists(file.path(path
        )
 }
 
-writeLines(paste0("PJNZ_ROOT_DIR=", path), file.path(root, "shared/.env"))
+message("To pick up the git hash from the Spectrum version we also need a GitHub auth token with read contents access to AvenirHealth-org/Spec5 repo")
+message("GitHub Auth token: ")
+token <- readLines("stdin", n = 1)
+
+writeLines(
+  c(
+    paste0("PJNZ_ROOT_DIR=", path),
+    paste0("GITHUB_AUTH_TOKEN=", token)
+  ),
+  file.path(root, "shared/env"))

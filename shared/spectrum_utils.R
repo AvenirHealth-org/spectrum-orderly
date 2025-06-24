@@ -6,6 +6,10 @@ spectrum_extract <- function(dir, config, output, timeout = 180) {
            timeout = timeout)
 }
 
+spectrum_version <- function() {
+  spectrum("/Version", timeout = 30)
+}
+
 spectrum <- function(..., timeout) {
   ## Note for this to work you must add Spectrum installation
   ## dir into your path
@@ -54,4 +58,37 @@ set_extract_options <- function(source_file, dest_file,
   write.table(ex, dest_file, 
               row.names = FALSE, quote = FALSE, sep = ",", 
               na = "", col.names = FALSE)
+}
+
+git_hash_from_spectrum_version <- function(version) {
+  ## list releases and get hash
+  ## need auth token
+  tag <- paste0("v", version)
+  token <- Sys.getenv("GITHUB_AUTH_TOKEN")
+  org <- "AvenirHealth-org"
+  repo <- "Spec5"
+  res <- httr::GET(
+    sprintf("https://api.github.com/repos/%s/%s/git/ref/tags/%s", org, repo, tag),
+    httr::add_headers(Accept = "application/vnd.github+json",
+                      Authorization = paste("Bearer", token))
+  )
+  if (httr::status_code(res) != 200) {
+    stop(sprintf("Failed to get git tag '%s', check version number is correct", tag))
+  }
+  body <- httr::content(res)
+  if (body$object$type == "commit") {
+    sha <- body$object$sha
+  } else {
+    res_sha <- httr::GET(
+      sprintf("https://api.github.com/repos/%s/%s/git/tags/%s", org, repo, body$object$sha),
+      httr::add_headers(Accept = "application/vnd.github+json",
+                        Authorization = paste("Bearer", token))
+    )
+    if (httr::status_code(res) != 200) {
+      stop(sprintf("Failed to get ref from git tag '%s', check version number is correct", tag))
+    }
+    body_sha <- httr::content(res_sha)
+    sha <- body_sha$object$sha
+  }
+  substr(sha, 1, 7)
 }
