@@ -47,7 +47,8 @@ You can now push, pull and query from the remote. See [docs](https://mrc-ide.git
 
 AIM will run via orderly for all countries automatically every week via private repo [spectrum-orderly-runner](https://github.com/avenirhealth-org/spectrum-orderly-runner). You can also manually trigger the run.
 
-To manually run go to the [spectrum-orderly-runner run AIM GitHub actiona](https://github.com/AvenirHealth-org/spectrum-orderly-runner/actions/workflows/run-aim.yaml)
+To manually run go to the [spectrum-orderly-runner run AIM GitHub actions](https://github.com/AvenirHealth-org/spectrum-orderly-runner/actions/workflows/run-aim.yaml)
+
 1. Click the "Run workflow" at the top right below the list of workflow runs
 1. Always use the "main" branch here, but you can select the version of spectrum desktop to install. This must match one of the [release tags from Spec5 repo](https://github.com/AvenirHealth-org/Spec5/releases) e.g. v6.42 or v6.43-beta.3. If not specified it will use the release tagged as "latest"
 1. The CI will install the specified version of Spectrum and then run Extract via the CLI and save the results. The orderly task will also record the hash of the Spec5 repo for this Spectrum version in metadata. It records the Spectrum version in parameters. These can be used for querying downstream.
