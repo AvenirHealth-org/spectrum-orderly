@@ -56,3 +56,20 @@ To manually run go to the [spectrum-orderly-runner run AIM GitHub actions](https
 ## Integration into Spectrum regression testing tool
 
 The [Spectrum regression testing tool](https://github.com/AvenirHealth-org/spectrum.regression.testing) is a Shiny app which can display data from orderly or from manually run Extracts. See the README in that repo for details.
+
+## Updating the extract configuration
+
+The extract configuration is stored in the [orderly repo shared directory](https://github.com/AvenirHealth-org/spectrum-orderly/blob/main/shared/aim_extract_template.ex) update this here
+the configuration is used in this ShinyApp to know what indicators are available for display. The configuration from the orderly run will be read and used automatically.
+
+This configuration was created by
+1. Run "Extract"
+2. Add any AIM projetion
+3. Select all indicators
+4. Save the configuration
+5. Open the configuration in a text editor, remove the hard coded file path so the chosen projection section should look something like
+   ```
+   Number of chosen projections: ,1,,,,,,,,,,,,
+   Chosen projections,,,,,,,,,,,,,
+   ,,,,,,,,,,,,,
+   ```

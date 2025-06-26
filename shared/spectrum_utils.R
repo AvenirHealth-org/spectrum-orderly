@@ -1,7 +1,7 @@
 spectrum_extract <- function(dir, config, output, timeout = 180) {
-  spectrum("/ExtractBatch", 
-           normalizePath(dir), 
-           normalizePath(config), 
+  spectrum("/ExtractBatch",
+           normalizePath(dir),
+           normalizePath(config),
            normalizePath(output),
            timeout = timeout)
 }
@@ -32,15 +32,18 @@ sys_which <- function(name) {
   unname(path)
 }
 
-set_extract_options <- function(source_file, dest_file, 
-                                recalculate_projection) {
+set_extract_options <- function(source_file, dest_file,
+                                recalculate_projection,
+                                run_leapfrog) {
   ex <- read.csv(source_file, header = FALSE)
   options_to_config <- list(
     recalculate_projection = "Recalculate projection: "
+    run_leapfrog = "Use leapfrog model: "
   )
-  
+
   opts <- list(
     recalculate_projection = as.integer(recalculate_projection)
+    run_leapfrog = as.integer(run_leapfrog)
   )
   for (opt in names(opts)) {
     row <- ex[, 1] == options_to_config[[opt]]
@@ -55,8 +58,8 @@ set_extract_options <- function(source_file, dest_file,
   }
   ## Can just save in place because we're using orderly so this won't change
   ## the original
-  write.table(ex, dest_file, 
-              row.names = FALSE, quote = FALSE, sep = ",", 
+  write.table(ex, dest_file,
+              row.names = FALSE, quote = FALSE, sep = ",",
               na = "", col.names = FALSE)
 }
 

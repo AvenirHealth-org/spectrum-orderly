@@ -13,9 +13,9 @@ params <- orderly2::orderly_parameters(spectrum_version = NULL,
                                        run_leapfrog = FALSE)
 orderly2::orderly_shared_resource(ex_config_template_path)
 orderly2::orderly_artefact(
-  description = "Extract configuration used after setting options via parameters", 
+  description = "Extract configuration used after setting options via parameters",
   ex_config_path)
-orderly2::orderly_artefact(description = "Extracted DP and AIM modvars", 
+orderly2::orderly_artefact(description = "Extracted DP and AIM modvars",
                            out_path)
 
 orderly2::orderly_shared_resource(utils_path)
@@ -29,10 +29,11 @@ orderly2::orderly_shared_resource(country_csv_path)
 countries <- read.csv(country_csv_path)
 
 pjnz_files <- paste0(countries$iso3, ".PJNZ")
-orderly2::orderly_dependency("download_pjnz_all_countries", "latest", 
+orderly2::orderly_dependency("download_pjnz_all_countries", "latest",
                              pjnz_files)
 
-set_extract_options(ex_config_template_path, ex_config_path, 
-                    params$recalculate_projection)
+set_extract_options(ex_config_template_path, ex_config_path,
+                    params$recalculate_projection,
+                    params$run_leapfrog)
 ## 3 hour time out
 spectrum_extract(".", ex_config_path, out_path, timeout = 60 * 60 * 3)
