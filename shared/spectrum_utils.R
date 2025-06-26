@@ -37,12 +37,12 @@ set_extract_options <- function(source_file, dest_file,
                                 run_leapfrog) {
   ex <- read.csv(source_file, header = FALSE)
   options_to_config <- list(
-    recalculate_projection = "Recalculate projection: "
+    recalculate_projection = "Recalculate projection: ",
     run_leapfrog = "Use leapfrog model: "
   )
 
   opts <- list(
-    recalculate_projection = as.integer(recalculate_projection)
+    recalculate_projection = as.integer(recalculate_projection),
     run_leapfrog = as.integer(run_leapfrog)
   )
   for (opt in names(opts)) {
