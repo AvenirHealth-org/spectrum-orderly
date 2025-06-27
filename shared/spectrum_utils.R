@@ -76,7 +76,7 @@ git_hash_from_spectrum_version <- function(version) {
                       Authorization = paste("Bearer", token))
   )
   if (httr::status_code(res) != 200) {
-    stop(sprintf("Failed to get git tag '%s', check version number is correct", tag))
+    stop(sprintf("Failed to get git tag '%s', check version number is correct:\n%s", tag, httr::content(res)))
   }
   body <- httr::content(res)
   if (body$object$type == "commit") {
@@ -88,7 +88,7 @@ git_hash_from_spectrum_version <- function(version) {
                         Authorization = paste("Bearer", token))
     )
     if (httr::status_code(res) != 200) {
-      stop(sprintf("Failed to get ref from git tag '%s', check version number is correct", tag))
+      stop(sprintf("Failed to get ref from git tag '%s', check version number is correct:\n%s", tag, httr::content(res)))
     }
     body_sha <- httr::content(res_sha)
     sha <- body_sha$object$sha
