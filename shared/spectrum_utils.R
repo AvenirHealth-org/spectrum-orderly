@@ -63,6 +63,11 @@ set_extract_options <- function(source_file, dest_file,
               na = "", col.names = FALSE)
 }
 
+print_list <- function(x, name = deparse(substitute(x))) {
+  items <- Map(function(y1, y2) paste(" -", y1, "=", y2), names(x), x)
+  paste(c(paste0(name, ":"), items), collapse = "\n")
+}
+
 git_hash_from_spectrum_version <- function(version) {
   ## list releases and get hash
   ## need auth token
@@ -76,7 +81,8 @@ git_hash_from_spectrum_version <- function(version) {
                       Authorization = paste("Bearer", token))
   )
   if (httr::status_code(res) != 200) {
-    stop(sprintf("Failed to get git tag '%s', check version number is correct:\n%s", tag, httr::content(res)))
+    response <- httr::content(res)
+    stop(sprintf("Failed to get git tag '%s', check version number is correct:\n%s", tag, print_list(response)))
   }
   body <- httr::content(res)
   if (body$object$type == "commit") {
@@ -88,7 +94,8 @@ git_hash_from_spectrum_version <- function(version) {
                         Authorization = paste("Bearer", token))
     )
     if (httr::status_code(res) != 200) {
-      stop(sprintf("Failed to get ref from git tag '%s', check version number is correct:\n%s", tag, httr::content(res)))
+      response <- httr::content(res)
+      stop(sprintf("Failed to get ref from git tag '%s', check version number is correct:\n%s", tag, print_list(response)))
     }
     body_sha <- httr::content(res_sha)
     sha <- body_sha$object$sha
