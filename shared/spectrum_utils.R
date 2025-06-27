@@ -73,7 +73,6 @@ git_hash_from_spectrum_version <- function(version) {
   ## need auth token
   tag <- paste0("v", version)
   token <- Sys.getenv("GITHUB_AUTH_TOKEN")
-  message(sprintf("Token is %s", token))
   org <- "AvenirHealth-org"
   repo <- "Spec5"
   res <- httr::GET(
