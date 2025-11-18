@@ -17,17 +17,17 @@ source(file.path(proj_root, "scripts/configure_remote.R"))
 countries <- read.csv(file.path(proj_root, "shared/countries.csv"))
 
 for (country in countries$iso3) {
-  existing_id <- orderly2::orderly_search("latest(parameter:iso3 == this:iso3)",
+  existing_id <- orderly::orderly_search("latest(parameter:iso3 == this:iso3)",
                                           name = "download_pjnz",
                                           parameters = list(iso3 = country),
                                           location = location_name)
 
   if (args$force || is.na(existing_id)) {
     message(sprintf("Running download task for '%s'", country))
-    id <- orderly2::orderly_run("download_pjnz", 
+    id <- orderly::orderly_run("download_pjnz", 
                                 parameters = list(iso3 = country),
                                 echo = FALSE)
-    orderly2::orderly_location_push(id, location_name)
+    orderly::orderly_location_push(id, location_name)
   } else {
     message(sprintf("Skipping run for '%s', as it already exists on the remote",
                     country))

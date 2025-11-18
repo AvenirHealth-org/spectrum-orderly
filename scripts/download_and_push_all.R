@@ -11,6 +11,6 @@ args <- docopt::docopt(doc)
 
 source(file.path(proj_root, "scripts/configure_remote.R"))
 
-id <- orderly2::orderly_run("download_pjnz_all_countries",
+id <- orderly::orderly_run("download_pjnz_all_countries",
                       echo = FALSE)
-orderly2::orderly_location_push(id, location_name)
+orderly::orderly_location_push(id, location_name)

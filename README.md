@@ -1,12 +1,12 @@
 # spectrum-orderly
 
-An [Orderly2](https://github.com/mrc-ide/orderly2) project which will fit spectrum model via the extract CLI tool
+An [Orderly](https://github.com/mrc-ide/orderly) project which will fit spectrum model via the extract CLI tool
 
 ## Prerequisite
 
 1. [Install Spectrum](https://www.avenirhealth.org/software-spectrum.php)
 2. Add spectrum.exe to your path
-3. [Install orderly2](https://github.com/mrc-ide/orderly2?tab=readme-ov-file#installation)
+3. [Install orderly](https://github.com/mrc-ide/orderly?tab=readme-ov-file#installation)
 4. Sync the [sharepoint remote](https://futuresinstitute.sharepoint.com/:f:/s/Programming/Es57cTFvF_tKv0KzTKacj_sBaCtvQKke_UtfB8_dzE-LzQ?e=65bdZw) to your
    local drive somewhere and add an env variable `ORDERLY_SHAREPOINT_LOCATION_PATH` with the fully qualified path.
 5. If you want to run either of the "download_pjnz" tasks you'll need the [UNAIDS data dropbox](https://www.dropbox.com/scl/fo/o3gp67kjqj60gl64intii/AEwtIKpPM5Bu3HogQ9UJvR4?rlkey=8u3r3buretsmic8352wnul2iw&st=la9sy6rv&dl=0)
@@ -29,7 +29,7 @@ as you have the sharepoint remote configured (see the section on "remote locatio
 Run the report passing the relevant iso3 as a parameter
 
 ```
-orderly2::orderly_run("run_aim", parameters = list(iso3 = "MWI"))
+orderly::orderly_run("run_aim", parameters = list(iso3 = "MWI"))
 ```
 
 ## Remote location
@@ -41,7 +41,7 @@ To use the remote you must set it up
 1. Sync the drive to your local machine and save the path you synced it to with as an env var `ORDERLY_SHAREPOINT_LOCATION_PATH`
 2. Run the script `./scripts/configure_remote.R` to set up the remote location with the name "sharepoint"
 
-You can now push, pull and query from the remote. See [docs](https://mrc-ide.github.io/orderly2/articles/collaboration.html) for details of working with the remote.
+You can now push, pull and query from the remote. See [docs](https://mrc-ide.github.io/orderly/articles/collaboration.html) for details of working with the remote.
 
 ## Running via CI
 

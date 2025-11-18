@@ -14,19 +14,19 @@
 ## to the remote. Perhaps it would have been easier to just copy the files
 ## in bulk. But here we are.
 
-orderly2::orderly_strict_mode()
-params <- orderly2::orderly_parameters(iso3 = NULL)
+orderly::orderly_strict_mode()
+params <- orderly::orderly_parameters(iso3 = NULL)
 
 out_path <- paste0(params$iso3, ".PJNZ")
-orderly2::orderly_artefact(description = "Copy PJNZ from local path into orderly", 
-                           out_path)
+orderly::orderly_artefact(description = "Copy PJNZ from local path into orderly", 
+                          out_path)
 
 
 ## Note that to run this you will have to have a local copy of the UNAIDS 
 ## spectrum files from Dropbox. Either from downloading or dropbox sync
 ## Then run ./scripts/
 country_csv_path <- "countries.csv"
-orderly2::orderly_shared_resource(country_csv_path)
+orderly::orderly_shared_resource(country_csv_path)
 countries <- read.csv(country_csv_path)
 iso3_to_dropbox_path <- setNames(countries$path, countries$iso3)
 
@@ -34,7 +34,7 @@ if (!(iso3 %in% names(iso3_to_dropbox_path))) {
   stop(paste("No dropbox path configured for ISO3 code:", iso3))
 }
 
-orderly2::orderly_shared_resource("env")
+orderly::orderly_shared_resource("env")
 dotenv::load_dot_env("env")
 PJNZ_ROOT_DIR <- Sys.getenv("PJNZ_ROOT_DIR")
 dropbox_path <- file.path(PJNZ_ROOT_DIR, iso3_to_dropbox_path[[iso3]])
