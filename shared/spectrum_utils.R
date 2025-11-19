@@ -13,7 +13,7 @@ spectrum_version <- function() {
 spectrum <- function(..., timeout) {
   ## Note for this to work you must add Spectrum installation
   ## dir into your path
-  spec <- "C:\\Users\\Test\\projects\\Spec5\\SPECTRUM.exe"
+  spec <- sys_which("spectrum")
   res <- suppressWarnings(system2(spec, c(...), stdout = TRUE, stderr = TRUE,
                                   timeout = timeout))
   if (system_success(res)) {

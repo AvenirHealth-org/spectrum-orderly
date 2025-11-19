@@ -32,9 +32,6 @@ pjnz_files <- paste0(countries$iso3, ".PJNZ")
 orderly::orderly_dependency("download_pjnz_all_countries", "latest",
                             pjnz_files)
 
-orderly::orderly_shared_resource("env")
-dotenv::load_dot_env("env")
-
 set_extract_options(ex_config_template_path, ex_config_path,
                     params$recalculate_projection,
                     params$run_leapfrog)
